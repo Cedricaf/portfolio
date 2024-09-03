@@ -127,6 +127,22 @@ section {
   transform: translateY(-5px);
 }
 
+
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content{
+  width: auto;
+  height: auto;
+ flex-wrap: wrap;
+  
+}
+
+
 footer {
   background: #333;
   color: #fff;
