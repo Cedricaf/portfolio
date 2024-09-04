@@ -58,7 +58,7 @@ header nav {
 }
 
 .hero {
-  height: 80vh;
+  height: 60vh;
   background: #f0f0f0;
   display: flex;
   justify-content: center;
@@ -107,7 +107,9 @@ section {
   text-align: center;
 }
 
+
 #projects .project-cards {
+  padding-top: 1rem;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -127,6 +129,34 @@ section {
   transform: translateY(-5px);
 }
 
+
+#about {
+  margin: 0 auto; /* Centers the section on the page */
+}
+
+#about h2 {
+  font-family: 'Arial', sans-serif; /* Simple, professional font */
+  font-size: 2em; /* Larger font size for the heading */
+  color: #333; /* Dark grey color for the text */
+  margin-bottom: 20px; /* Space between heading and text */
+  text-align: center; /* Center the heading */
+}
+
+.about-text {
+  font-size: 1.125em; 
+  line-height: 1.6; 
+  text-align: justify; 
+}
+
+@media (max-width: 600px) {
+  #about {
+      padding: 20px 10px; /* Reduces padding on smaller screens */
+  }
+
+  .about-text {
+      font-size: 1em; /* Adjusts font size for mobile readability */
+  }
+}
 
 
 .contact{
@@ -150,3 +180,4 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
+
