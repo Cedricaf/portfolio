@@ -66,6 +66,7 @@ header nav {
   text-align: center;
   padding: 0 2em;
   transition: transform 0.3s ease;
+  border-radius: 0.8rem;
 }
 
 .hero:hover {
@@ -131,15 +132,14 @@ section {
 
 
 #about {
-  margin: 0 auto; /* Centers the section on the page */
+  margin: 0 auto; 
 }
 
 #about h2 {
-  font-family: 'Arial', sans-serif; /* Simple, professional font */
-  font-size: 2em; /* Larger font size for the heading */
-  color: #333; /* Dark grey color for the text */
-  margin-bottom: 20px; /* Space between heading and text */
-  text-align: center; /* Center the heading */
+  font-family: 'Arial', sans-serif; 
+  color: #333; 
+  margin-bottom: 20px; 
+  text-align: center; 
 }
 
 .about-text {
@@ -150,11 +150,11 @@ section {
 
 @media (max-width: 600px) {
   #about {
-      padding: 20px 10px; /* Reduces padding on smaller screens */
+      padding: 20px 10px; 
   }
 
   .about-text {
-      font-size: 1em; /* Adjusts font size for mobile readability */
+      font-size: 1em; 
   }
 }
 
