@@ -69,6 +69,14 @@ header nav {
   border-radius: 0.8rem;
 }
 
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero:hover {
   transform: translateY(1rem);
 }
@@ -77,6 +85,20 @@ header nav {
 .hero-content h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+}
+
+.hero-avatar{
+  width: 8rem;
+  height: 8rem;
+  border: solid 0.04rem gray;
+  border-radius: 50%;
+}
+
+.hero-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .span {
@@ -145,7 +167,8 @@ section {
 .about-text {
   font-size: 1.125em; 
   line-height: 1.6; 
-  text-align: justify; 
+  justify-content: center;
+  align-content: center;
 }
 
 @media (max-width: 600px) {
