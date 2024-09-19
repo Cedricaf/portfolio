@@ -58,7 +58,7 @@ header nav {
 }
 
 .hero {
-  height: 60vh;
+  height: 30rem;
   background: #f0f0f0;
   display: flex;
   justify-content: center;
@@ -75,6 +75,8 @@ header nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+  
 }
 
 .hero:hover {
@@ -88,17 +90,18 @@ header nav {
 }
 
 .hero-avatar{
-  width: 8rem;
-  height: 8rem;
-  border: solid 0.04rem gray;
-  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 0.8rem;
 }
 
 .hero-avatar img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  border-radius: 0.8rem;
+
+  image-rendering: crisp-edges;
 }
 
 .span {
@@ -127,7 +130,7 @@ header nav {
 }
 
 section {
-  padding: 4em 2em;
+  padding: 2em 2em;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -155,7 +158,6 @@ section {
   border-radius: 0.8rem;
   width: 100%;
   max-width: 250px;
-  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
@@ -208,6 +210,32 @@ a, a:focus, a:active {
   color: inherit;
 }
 
+.stats{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  
+}
+
+.stats-iframe{
+
+}
+
+.experience{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tag-cloud {
+  display: inline-block;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 2.5rem;
+  background-color: #F0A500;
+  margin-top: 8px;
+}
 
 @media (max-width: 600px) {
   #about {
