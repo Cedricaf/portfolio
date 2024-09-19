@@ -1,6 +1,10 @@
 # portfolio
 
 
-website link : https://34737.hosts1.ma-cloud.nl/portfolio/
+website link : https://cedricaf.github.io
 
-
+dingen die ik nog moet toevoegen:
+- betere project cards (talen bij projecten neerzetten)
+- animations
+- skills laten zien
+- eventueel modals gebruiken
