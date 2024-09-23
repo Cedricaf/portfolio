@@ -222,22 +222,39 @@ a, a:focus, a:active {
 
 }
 
-.experience{
+#skills h2{
+  padding: 1rem;
+}
+
+.skill-bar {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  flex-direction: column;
   flex-wrap: wrap;
 }
-.tag-cloud {
-  display: inline-block;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 2.5rem;
-  background-color: #F0A500;
-  margin-top: 8px;
+
+.skill-bar p {
+  font-weight: bold;
 }
+
+.progress {
+
+  width: 50%;
+  background-color: #ddd;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress span {
+  display: block;
+  height: 1rem;
+  background-color: #f0a500;
+  border-radius: 5%;
+}
+
 
 @media (max-width: 600px) {
   #about {

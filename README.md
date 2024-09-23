@@ -1,7 +1,7 @@
 # portfolio
 
 
-website link : https://cedricaf.github.io
+website link: https://cedricaf.github.io
 
 dingen die ik nog kan toevoegen:
 - betere project cards (talen bij projecten neerzetten)
