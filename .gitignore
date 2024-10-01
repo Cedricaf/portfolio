@@ -1,0 +1,53 @@
+# Node.js dependencies
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# Temporary files and logs
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE or Editor directories/files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore environment variable files
+.env
+.env.local
+.env.*.local
+
+# Ignore npm or yarn lock files (if you're only using one)
+# If using npm
+yarn.lock
+# If using Yarn
+package-lock.json
+
+# Ignore generated files from design tools
+*.sketch
+*.psd
+*.xd
+
+# Ignore any other personal configuration files
+*.config.js
+*.config.json
+
+# Ignore Mac OS system files
+__MACOSX/
+
+# Ignore Git-specific files that may cause conflicts
+.git/
+
+# Ignore compiled stylesheets (if using a preprocessor)
+*.sass-cache/
+*.scss-cache/
