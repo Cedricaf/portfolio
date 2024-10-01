@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/6b17c91111.js" crossorigin="anonymous" defer></script>
+    <title>Productdetails</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navBar">
+            <figure class="logo"><img src="img/skateboard_logo.svg" alt=""></figure>
+            <ul class="links">
+                <li><a class="navText" href="index.html">Home</a></li>
+                <li><a class="navText" href="products1.html">Producten #1</a></li>
+                <li><a class="navText" href="products2.html">Producten #2</a></li>
+                <li class="searchBar">
+                    <input type="text" placeholder="Zoeken" class="searchBar__input">
+                </li>
+            </ul>
+            <a href="#footer" class="action-button">Contact</a>
+            <div class="toggle-button">
+                <i class="fa-solid fa-bars" style="color: #000000;"></i>
+            </div>
+            <ul class="dropdown open">
+                <li><a class="navText" href="index.html">Home</a></li>
+                <li><a class="navText" href="products1.html">Producten</a></li>
+                <li><a class="navText" href="products2.html">Producten</a></li>
+                <li><a class="navText" href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-details">
+        <article class="productBlock">
+            <div class="product-content-image">
+                <img id="js--imageChange" src="img/rs(1).webp" alt="image of skateboard" class="product-content-image-image">
+            </div>
+            <div class="product-content-description">
+                <a href="shoppingcart.html" class="shoppingCartLink">
+                    <button class="product-content-cartButton">
+                        <div class="itemAmount">0</div>
+                        <i id="cartIcon" class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </a>
+
+                <div class="product-content-title">
+                    <h3>Carver JOB Camo Tiger</h3>
+                </div>
+                <div class="product-content-features">
+                    <figure id="js--circleButton1" class="circleDefault cyan"></figure>
+                    <figure id="js--circleButton2" class="circleDefault lightGreen"></figure>
+                    <figure id="js--circleButton3" class="circleDefault yellow"></figure>
+                </div>
+                <h3 class="product-content-price">
+                    €155,-
+                </h3>
+                <div class="product-content-text">
+                    <p>De Blind OG Water Color skateboard is een uniek en opvallend skateboard dat is ontworpen voor
+                        zowel beginners als ervaren skateboarders. Het skateboard heeft een klassieke vorm met een
+                        stevig 7-laags esdoornhouten deck, wat zorgt voor duurzaamheid en stabiliteit tijdens het
+                        rijden.
+                        <br>
+                        <br>
+                        Wat de Blind OG Water Color echt onderscheidt, is het artistieke en kleurrijke waterverfdesign
+                        op het deck. Het deck is versierd met levendige waterverfachtige patronen en spatten in
+                        verschillende tinten en kleuren. Elk deck heeft een uniek ontwerp, waardoor jouw skateboard een
+                        persoonlijke en opvallende uitstraling krijgt.
+                        <br>
+                        <br>
+                        Het skateboard is uitgerust met hoogwaardige componenten die zorgen voor een soepele en
+                        responsieve rijervaring. Het heeft duurzame en lichtgewicht aluminium trucks die stabiliteit
+                        bieden tijdens het uitvoeren van tricks en manoeuvres. De 52 mm wielen zijn gemaakt van
+                        hoogwaardig urethaan, waardoor ze grip bieden op verschillende oppervlakken en een goede mix van
+                        snelheid en controle mogelijk maken.</p>
+                </div>
+                <button id="cartButton" class="product-content-button">
+                    In Winkelwagen
+                </button>
+            </div>
+
+        </article>
+
+    </section>
+
+
+
+    <footer id="footer" class="footer">
+        <section class="footerBlocks">
+            <ul class="footerBlock">
+                <li class="footerLink">
+                    <h2>Service</h2>
+                </li>
+                <li class="footerLink">Levering</li>
+                <li class="footerLink">Voorwaarden</li>
+                <li class="footerLink">Omruilen</li>
+
+            </ul>
+            <ul class="footerBlock">
+                <li class="footerLink">
+                    <h2>Other</h2>
+                </li>
+                <li class="footerLink">Reparatie</li>
+                <li class="footerLink">Inruilservice</li>
+                <li class="footerLink">Garantie</li>
+
+            </ul>
+            <ul class="footerBlock">
+                <li class="footerLink">
+                    <h2>Contact</h2>
+                </li>
+                <li class="footerLink">Cedric Király</li>
+                <li class="footerLink"><a href="https://github.com/cedricaf" target="_blank">Github</a></li>
+                <li class="footerLink"><a href="mailto:34737@ma-web.nl">Email</a></li>
+            </ul>
+
+        </section>
+
+    </footer>
+</body>
+
+</html>
