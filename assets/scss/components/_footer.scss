@@ -1,0 +1,56 @@
+@use '../variables';
+@use '../keyframes';
+@use '../mediaqueries';
+
+
+
+
+
+  
+  footer {
+    background: linear-gradient(135deg, #333, #444);
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: relative;
+    overflow: hidden;
+  
+    p {
+      margin: 0.5em 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+  
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1em;
+        
+      a {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: transform 0.7s ease, color 0.3s ease;
+  
+        &:hover {
+          color: variables.$yellowcolor;
+          transform: scale(1.7);
+        }
+  
+        i {
+          transition: color 0.5s ease;
+        }
+      }
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      background: linear-gradient(90deg, variables.$yellowcolor, variables.$darkyellowcolor);
+    }
+  }
+  

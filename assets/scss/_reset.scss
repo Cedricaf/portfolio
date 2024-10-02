@@ -17,3 +17,27 @@
     box-sizing: border-box;
     color: #333;
   }
+
+  section {
+    padding: 2em 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .span {
+    font-weight: bold;
+    color: #f0a500;
+    transition: color 0.3s ease;
+  }
+  
+  .span:hover {
+    color: #d08e00;
+  }
+  
+
+  a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+  

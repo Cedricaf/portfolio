@@ -1,6 +1,10 @@
-@use './components/header.scss';
-@use './components/hero.scss';
-@use 'mediaqueries.scss';
-@use 'varables';
+@use './components/header';
+@use './components/hero';
+@use './components/about';
+@use './components/skills';
+@use './components/projects';
+@use './components/contact';
+@use './components/footer';
+
 @use 'reset';
-@use 'keyframes';
+

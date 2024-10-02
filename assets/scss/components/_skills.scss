@@ -1,0 +1,60 @@
+@use '../variables';
+@use '../keyframes';
+@use '../mediaqueries';
+
+#skills {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s ease-out forwards;
+  
+    h2 {
+      padding: 1rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInTitle 1.5s ease-out forwards;
+    }
+  }
+  
+  .skill-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    animation: fadeInText 2s ease-out forwards;
+  
+    p {
+      font-weight: bold;
+    }
+  
+    .progress {
+      width: 50%;
+      background-color: #ddd;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-top: 0.5rem;
+  
+      span {
+        display: block;
+        height: 1rem;
+        background-color: #f0a500;
+        border-radius: 5%;
+      }
+    }
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  

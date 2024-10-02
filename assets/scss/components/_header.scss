@@ -1,43 +1,44 @@
-@use '../varables';
+@use '../variables';
 @use '../keyframes';
 @use '../mediaqueries';
 
 header {
-    background: hsl(0, 0%, 20%);
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-  }
-  
-  header nav {
+  background: hsl(0, 0%, 20%);
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2em;
-    
   }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
   
-  
-  
-  .nav-links li {
+  li {
     margin-left: 2rem;
   }
-  
-  .nav-links a {
+
+  a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
+
+    &:hover {
+      color: #f0a500;
+    }
   }
-  
-  .nav-links a:hover {
-    color: #f0a500;
-  }
-  
-  .logo{
-    display: flex;
-    font-size: 150%;
-  }
-  
+}
+
+.logo {
+  display: flex;
+  font-size: 150%;
+}

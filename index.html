@@ -13,7 +13,9 @@
     <link rel="manifest" href="assets/img/favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -38,19 +40,20 @@
             <a href="/path/to/cv" class="btn" download>CV bekijken <i class="fa-regular fa-file"></i></a>
         </div>
     </section>
-    
+
 
     <section id="about">
         <h2>Over Mij</h2>
         <p class="about-text">
-            Ik wil mijzelf verder ontwikkelen als front-end developer door te werken met <span class="span"> HTML </span>,
+            Ik wil mijzelf verder ontwikkelen als front-end developer door te werken met <span class="span"> HTML
+            </span>,
             <span class="span"> CSS </span> en <span class="span"> Javascript </span> om websites te maken
             of te designen.
             Ik sta open om nieuwe methodes te leren en meer ervaring opdoen door aan meer projecten te werken.
-            
+
         </p>
 
-        
+
     </section>
 
     <section id="skills">
@@ -72,7 +75,9 @@
             <div class="progress"><span style="width: 70%;"></span></div>
         </div>
         <div class="stats">
-            <iframe class="stats-iframe" src="https://github-readme-stats.vercel.app/api/?username=cedricaf&hide=stars,issues&show_icons=true&bg_color=F0A500&title_color=fff&icon_color=fff&text_color=fff" height="100%" width="90%"frameborder="0"></iframe>
+            <iframe class="stats-iframe"
+                src="https://github-readme-stats.vercel.app/api/?username=cedricaf&hide=stars,issues&show_icons=true&bg_color=F0A500&title_color=fff&icon_color=fff&text_color=fff"
+                height="100%" width="90%" frameborder="0"></iframe>
         </div>
     </section>
 
@@ -97,10 +102,8 @@
             <div class="card">
                 <img src="assets/img/project2.webp" alt="">
                 <h3>CSS Art</h3>
-                <a href="https://github.com/Cedricaf/css-art" target="_blank"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="css-art/index.html" target="_blank"><i
-                        class="fa-solid fa-earth-americas"></i></a>
+                <a href="https://github.com/Cedricaf/css-art" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="css-art/index.html" target="_blank"><i class="fa-solid fa-earth-americas"></i></a>
             </div>
 
 
@@ -108,7 +111,7 @@
             <div class="card">
                 <img src="assets/img/project3.webp" alt="">
                 <h3>Duurzaam Huis</h3>
-                
+
                 <a href="https://github.com/Cedricaf/duurzaam-huis"><i class="fa-brands fa-github"></i></a>
                 <a href="duurzaam-huis/index.html"><i class="fa-solid fa-earth-americas"></i></a>
             </div>
@@ -128,16 +131,26 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <div class="contact-content">
-            <p><strong>Email:</strong> <a href="mailto:cedricaf@outlook.com">email</a></p>
-            <p><strong>Linkedin:</strong> <a href="https://linkedin.com/in/cedrickiraly" target="_blank">linkedin</a></p>
-        </div>
+        <form id="form" class="topBefore">
+
+            <input id="name" type="text" placeholder="Name">
+            <input id="email" type="text" placeholder="E-mail">
+            <textarea id="message" type="text" placeholder="Message"></textarea>
+            <input id="submit" type="submit" value="Submit">
+
+        </form>
 
     </section>
 
     <footer>
         <p>&copy; 2024 Cedric Király. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+        </div>
     </footer>
+
 </body>
 
 </html>

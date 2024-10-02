@@ -1,0 +1,33 @@
+@use '../variables';
+@use '../keyframes';
+@use '../mediaqueries';
+
+
+#about {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s ease-out forwards;
+  
+    h2 {
+      color: #333;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInTitle 1.5s ease-out forwards;
+    }
+  }
+  
+  .about-text {
+    font-size: 1.125em;
+    line-height: 1.8;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInText 2s ease-out forwards;
+  }
+  
