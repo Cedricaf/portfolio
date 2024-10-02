@@ -61,16 +61,32 @@ header nav {
 
 .hero {
   height: 30rem;
-  background: #f0f0f0;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 2em;
-  transition: transform 0.3s ease;
   border-radius: 0.8rem;
+  overflow: hidden;
+  position: relative;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+  animation: moveBackground 10s infinite linear;
+}
+
+@keyframes moveBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50%, 50%); }
+}
 
 .hero-content {
   display: flex;
@@ -78,58 +94,65 @@ header nav {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  z-index: 1;
 }
-
-.hero:hover {
-  transform: translateY(1rem);
-}
-
 
 .hero-content h2 {
   font-size: 2.5em;
+  color: #f0a500;
+  margin-bottom: 0.5rem;
 }
 
-.hero-avatar{
+.hero-avatar {
   width: 13rem;
   height: 13rem;
-  border-radius: 0.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-avatar img{
+.hero-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 0.8rem;
-
-  image-rendering: crisp-edges;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.span {
-  color: #f0a500;
-  font-style: bold;
+.hero-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.text-effect{
-  color: #f0a500;
-  border-right: 0.2rem solid #333;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 1.5s steps(13), cursor .5s step-end infinite alternate;
-  animation-delay: 0s
+.text-effect {
+  color: #f0a500; /* Text color */
+  border-right: 0.2rem solid #333; /* Simulate the cursor effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hides text beyond the width */
+  width: 0; /* Initial width for the typing effect */
+  animation: typing 2s steps(13) forwards, cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Text progressively revealed */
+  }
 }
 
 @keyframes cursor {
-  50% { border-color: transparent;}
+  50% {
+    border-color: transparent; /* Blinking cursor effect */
+  }
 }
 
-@keyframes typing{
-  from { width: 0;}
-}
 
 .hero-content p {
   font-size: 1.2em;
   margin-bottom: 1em;
+  color: #666;
 }
 
 .btn {
@@ -137,15 +160,18 @@ header nav {
   color: #fff;
   padding: 0.7em 1.5em;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+ 
 }
 
-.fa-regular{
-  font-size: 95%;
-}
 .btn:hover {
-  background: #d08e00;
+  background: linear-gradient(135deg, #d08e00, #b77400);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fa-regular {
+  font-size: 95%;
 }
 
 section {
@@ -154,6 +180,7 @@ section {
   margin: 0 auto;
   text-align: center;
 }
+
 
 
 #projects .project-cards {
@@ -197,22 +224,78 @@ section {
 
 
 #about {
-  margin: 0 auto; 
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s ease-out forwards;
 }
 
 #about h2 {
-  font-family: 'Arial', sans-serif; 
-  color: #333; 
-  margin-bottom: 1rem; 
-  text-align: center; 
+  
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitle 1.5s ease-out forwards;
 }
 
 .about-text {
-  font-size: 1.125em; 
-  line-height: 1.6; 
-  justify-content: center;
-  align-content: center;
+  font-size: 1.125em;
+  line-height: 1.8;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 2s ease-out forwards;
 }
+
+.span {
+  font-weight: bold;
+  color: #f0a500;
+  transition: color 0.3s ease;
+}
+
+.span:hover {
+  color: #d08e00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .fa-brands{
   font-size: 190%;
@@ -237,8 +320,24 @@ a, a:focus, a:active {
   
 }
 
+#skills{
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
 #skills h2{
   padding: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitle 1.5s ease-out forwards;
 }
 
 .skill-bar {
@@ -248,6 +347,7 @@ a, a:focus, a:active {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  animation: fadeInText 2s ease-out forwards;
 }
 
 .skill-bar p {
@@ -303,4 +403,3 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
-
