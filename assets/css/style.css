@@ -151,10 +151,6 @@ header nav {
   border-radius: 0.5rem;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-.hero .btn:hover {
-  background: linear-gradient(135deg, #f0a500, #b77400);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 .hero .fa-regular {
   font-size: 95%;
 }
@@ -235,7 +231,18 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 20px;
+}
+.stats .stats-iframe {
+  width: 80%;
+  height: 300px;
+  border: none;
+}
+@media (max-width: 768px) {
+  .stats .stats-iframe {
+    width: 100%;
+    height: auto;
+  }
 }
 
 #projects .project-cards {
