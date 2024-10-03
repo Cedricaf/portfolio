@@ -345,7 +345,7 @@ footer .social-icons a {
 }
 footer .social-icons a:hover {
   color: #f0a500;
-  transform: scale(1.7);
+  transform: scale(1.4);
 }
 footer .social-icons a i {
   transition: color 0.5s ease;

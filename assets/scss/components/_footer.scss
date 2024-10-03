@@ -3,9 +3,6 @@
 @use '../mediaqueries';
 
 
-
-
-
   
   footer {
     background: linear-gradient(135deg, #333, #444);
@@ -34,7 +31,7 @@
   
         &:hover {
           color: variables.$yellowcolor;
-          transform: scale(1.7);
+          transform: scale(1.4);
         }
   
         i {
