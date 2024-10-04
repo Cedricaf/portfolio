@@ -25,7 +25,8 @@
   .about-text {
     font-size: 1.125em;
     line-height: 1.8;
-    text-align: justify;
+    display: flex;
+    flex-direction: row;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInText 2s ease-out forwards;
