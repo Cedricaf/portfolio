@@ -1,6 +1,8 @@
 @use '../variables';
 @use '../keyframes';
 @use '../mediaqueries';
+@use '../mixins';
+
 
 header {
   background: hsl(0, 0%, 20%);
