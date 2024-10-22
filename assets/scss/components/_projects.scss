@@ -6,44 +6,129 @@
 
 
 #projects {
-    .project-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  h2 {
+    @include mixins.title;
+    font-size: 2rem; // Adjust as needed
+  }
+  
+  .card {
+    background: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 25rem;
+    max-width: 35rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: visible; 
+    position: relative; 
+    padding: 2rem;
+    
+  
+    .img-container {
+      width: 100%;
+      height: 200px; 
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+    
+  
+    h3 {
+      font-size: 1.5rem; 
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  .fa-brands,
+  .fa-solid {
+    font-size: 1.9rem;
+    color: black;
+  }
+  
+  
+  
+  @media (max-width: 1200px) {
+    .card {
+      max-width: 30rem; 
     }
   
     h2 {
-      @include mixins.title;
+      font-size: 1.8rem;
     }
   
+    .card h3 {
+      font-size: 1.4rem;
+    }
+  
+    .card p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .card {
-      background: #f0f0f0;
-      padding: 1.5rem;
-      border-radius: 0.8rem;
-      width: 100%;
-      max-width: 300px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      overflow: hidden;
+      max-width: 25rem; 
+      padding: 2rem;
+    }
   
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 70%;
-        border-radius: 0.5rem;
-      }
+    h2 {
+      font-size: 1.6rem;
+    }
   
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
+    .card h3 {
+      font-size: 1.3rem;
+    }
+  
+    .card p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      max-width: 20rem; 
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    .card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .card p {
+      font-size: 0.85rem;
     }
   
     .fa-brands,
     .fa-solid {
-      font-size: 190%;
-      color: black;
+      font-size: 1.6rem; 
     }
+  }
+  
   }
   
