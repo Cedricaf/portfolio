@@ -9,6 +9,8 @@ header {
   color: #fff;
   padding: 1em 0;
   text-align: center;
+  position: relative;
+
 
   nav {
     display: flex;
@@ -18,12 +20,22 @@ header {
     margin: 0 auto;
     padding: 0 2em;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    height: 0.2rem; 
+    background: linear-gradient(90deg, variables.$yellowcolor, variables.$darkyellowcolor); 
+  }
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  
+
   li {
     margin-left: 2rem;
   }
@@ -44,3 +56,5 @@ header {
   display: flex;
   font-size: 150%;
 }
+
+
