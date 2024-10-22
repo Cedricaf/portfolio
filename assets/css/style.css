@@ -362,6 +362,9 @@ header::before {
   }
 }
 
+#contact p {
+  font-size: 1.125em;
+}
 #contact a {
   color: #f0a500;
   font-weight: 600;
