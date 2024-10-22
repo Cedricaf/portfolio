@@ -349,6 +349,11 @@ header nav {
   }
 }
 
+#contact a {
+  color: #f0a500;
+  font-weight: 600;
+}
+
 footer {
   background: linear-gradient(135deg, #333, #444);
   color: #fff;
