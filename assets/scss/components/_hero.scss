@@ -82,3 +82,15 @@
     }
   }
   
+
+  @media (max-width: 480px) {
+
+    .hero{
+
+      .hero-avatar{
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+    
+  }
