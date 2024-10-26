@@ -62,3 +62,41 @@ header {
   display: flex;
   font-size: 150%;
 }
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup button {
+  background-color: variables.$yellowcolor;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: variables.$darkyellowcolor;
+}
