@@ -84,6 +84,11 @@ header::before {
 .nav-links li {
   margin-left: 2rem;
 }
+.nav-links li:hover {
+  transform: scale(1.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 1s, box-shadow 0.6s;
+}
 .nav-links a {
   text-decoration: none;
   color: #fff;
@@ -322,8 +327,9 @@ header::before {
   gap: 0.7rem;
 }
 #projects .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 1.2s, box-shadow 0.6s;
 }
 #projects .fa-brands,
 #projects .fa-solid {
