@@ -315,6 +315,12 @@ header::before {
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
+#projects .card .project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
 #projects .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -353,8 +359,11 @@ header::before {
 }
 @media (max-width: 480px) {
   #projects .card .img-container {
-    width: 20rem;
-    height: 8rem;
+    max-width: 15rem;
+  }
+  #projects .card img {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   #projects h2 {
     font-size: 1.4rem;
