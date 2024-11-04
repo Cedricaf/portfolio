@@ -188,7 +188,8 @@ header::before {
   margin-bottom: 0.5rem;
 }
 .hero .hero-content p {
-  font-size: 1.2em;
+  font-size: 1.27em;
+  font-style: italic;
   margin-bottom: 1em;
   color: #333;
 }
