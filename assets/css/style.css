@@ -228,6 +228,11 @@ header::before {
   border-radius: 0.5rem;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+.hero .btn:hover {
+  background: #b77400;
+  transform: scale(1.2);
+  transition: 1.4s;
+}
 .hero .fa-regular {
   font-size: 95%;
 }
