@@ -3,14 +3,12 @@
 @use '../mediaqueries';
 @use '../mixins';
 
-
 header {
   background: hsl(0, 0%, 20%);
   color: #fff;
   padding: 1em 0;
   text-align: center;
   position: relative;
-
 
   nav {
     display: flex;
@@ -19,6 +17,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2em;
+    position: relative;
   }
 
   &::before {
@@ -35,12 +34,13 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0;
 
   li {
     margin-left: 2rem;
 
     &:hover {
-      transform:  scale(1.3);
+      transform: scale(1.3);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
       transition: transform 1s, box-shadow 0.6s;
     }
@@ -63,8 +63,15 @@ header {
   font-size: 150%;
 }
 
-// cookies popup might remove under this
+// Mobile hamburger icon (hidden by default)
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
 
+// cookies popup might remove under this
 .popup {
   position: fixed;
   bottom: 20px;
@@ -92,7 +99,7 @@ header {
 }
 
 .popup button {
-  background-color: variables.$yellowcolor;;
+  background-color: variables.$yellowcolor;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -102,7 +109,7 @@ header {
 }
 
 .popup button:hover {
-  background-color: variables.$darkyellowcolor;;
+  background-color: variables.$darkyellowcolor;
 }
 
 /* Media query for smaller screens */
@@ -123,5 +130,37 @@ header {
     padding: 8px 12px;
     font-size: 0.9rem;
     width: 100%;
+  }
+
+  /* Show hamburger menu on smaller screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Stack navigation items vertically */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: hsl(0, 0%, 20%);
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 1em 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
   }
 }
