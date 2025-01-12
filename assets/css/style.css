@@ -66,7 +66,6 @@ header nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2em;
-  position: relative;
 }
 header::before {
   content: "";
@@ -81,7 +80,6 @@ header::before {
 .nav-links {
   list-style: none;
   display: flex;
-  margin: 0;
 }
 .nav-links li {
   margin-left: 2rem;
@@ -104,13 +102,6 @@ header::before {
 .logo {
   display: flex;
   font-size: 150%;
-}
-
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: #fff;
 }
 
 .popup {
@@ -169,33 +160,6 @@ header::before {
     padding: 8px 12px;
     font-size: 0.9rem;
     width: 100%;
-  }
-  /* Show hamburger menu on smaller screens */
-  .hamburger {
-    display: block;
-  }
-  /* Stack navigation items vertically */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: hsl(0, 0%, 20%);
-    position: absolute;
-    z-index: 3;
-    top: 60px;
-    left: 0;
-    right: 0;
-    padding: 1em 0;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 1rem 0;
-  }
-  .nav-links li a {
-    font-size: 1.2rem;
   }
 }
 .hero {
@@ -385,29 +349,28 @@ header::before {
 #projects .card {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   background: #f0f0f0;
   padding: 1.5rem;
   border-radius: 0.8rem;
-  width: 50%;
+  width: 100%;
   height: auto;
   max-width: 35rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: visible;
   position: relative;
   padding: 2rem;
   gap: 0.4rem;
 }
 #projects .card .img-container {
-  width: 30rem;
+  width: 24rem;
   height: 10rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-  padding: 0.5rem;
 }
 #projects .card img {
-  border-radius: 1rem;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -415,51 +378,32 @@ header::before {
 }
 #projects .card h3 {
   font-size: 1.5rem;
-  padding: 0.5rem;
 }
 #projects .card p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
-  text-align: left;
-  padding: 0.5rem;
 }
 #projects .card .project-links {
   display: flex;
-  justify-content: start;
-  align-items: start;
-  gap: 1rem;
-  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+#projects .card:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 1.2s, box-shadow 0.6s;
 }
 #projects .fa-brands,
 #projects .fa-solid {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
 }
 #projects .fa-brands:hover,
 #projects .fa-solid:hover {
   color: #f0a500;
   transition: 0.6s;
-}
-#projects .tags {
-  padding: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-#projects .tag {
-  background-color: #f0a500;
-  color: white;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.7rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-#projects .tag:hover {
-  transform: translateY(1px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s, box-shadow 0.6s;
 }
 @media (max-width: 1200px) {
   #projects h2 {

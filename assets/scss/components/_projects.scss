@@ -26,7 +26,7 @@
     background: #f0f0f0;
     padding: 1.5rem;
     border-radius: 0.8rem;
-    width: 50%;
+    width: 100%;
     height: auto;
     max-width: 35rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -40,8 +40,8 @@
     
   
     .img-container {
-      width: 30rem;
-      height: 10rem;
+      width: 100%; /* Ensure the image container is responsive */
+      height: 12rem; /* Adjusted height for better aspect ratio on smaller screens */
       border-radius: 1rem;
       overflow: hidden;
       padding: 0.5rem;
@@ -123,69 +123,56 @@
   
   
   
-  @media (max-width: 1200px) {
-    
-  
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    .card h3 {
-      font-size: 1.4rem;
-    }
-  
-    .card p {
-      font-size: 0.95rem;
-    }
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    width: 90%; /* Reduce width on smaller screens */
   }
-  
-  @media (max-width: 768px) {
-   
-    h2 {
-      font-size: 1.6rem;
-    }
-  
-    .card h3 {
-      font-size: 1.3rem;
-    }
-  
-    .card p {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card{
-      .img-container{
-        max-width: 15rem;
-       
-      }
 
-      img{
-        object-fit:contain;
-      }
-    }
-    
-    
-  
-
-    h2 {
-      font-size: 1.4rem;
-    }
-  
-    .card h3 {
-      font-size: 1.2rem;
-    }
-  
-    .card p {
-      font-size: 0.85rem;
-    }
-  
-    .fa-brands,
-    .fa-solid {
-      font-size: 1.6rem; 
-    }
+  .img-container {
+    height: 10rem; /* Adjust image height for smaller screens */
   }
+
+  h3 {
+    font-size: 1.2rem; /* Slightly smaller font size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .project-links {
+    gap: 0.8rem; /* Reduce gap between links */
+  }
+
+  .tag {
+    font-size: 0.8rem; /* Slightly smaller tags */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .img-container {
+    height: 8rem; /* Further reduce image height for very small screens */
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem; /* Smaller padding for tags */
+  }
+}
   
   }
   
