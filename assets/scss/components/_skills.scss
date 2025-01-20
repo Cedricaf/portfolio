@@ -4,67 +4,73 @@
 @use '../mixins';
 
 
+/* Container Styling */
 #skills {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 2rem;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeIn 1s ease-out forwards;
-  
-    h2 {
-      @include mixins.title;
-    }
-  }
-  
-  .skill-bar {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    animation: fadeInText 2s ease-out forwards;
-  
-    p {
-      font-weight: bold;
-    }
-  
-    .progress {
-      width: 50%;
-      background-color: #ddd;
-      border-radius: 1rem;
-      overflow: hidden;
-      margin-top: 0.5rem;
-  
-      span {
-        display: block;
-        height: 1rem;
-        background-color: #f0a500;
-        border-radius: 5%;
-      }
-    }
-  }
-  
-  .stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  
+  font-family: 'Arial', sans-serif;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+#skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
 
+/* Skill Block */
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
+.skill-info {
+  width: 20%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+}
 
-    
-    .stats-iframe {
-      width: 80%; 
-      
-      border: none;
-  
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
-  
+.skill-bar {
+  width: 75%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.skill-bar .filled {
+  height: 100%;
+  background: linear-gradient(50deg, variables.$yellowcolor, variables.$lightyellowcolor);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Add width dynamically using data-skill */
+.skill-bar .filled[data-skill="100"] {
+  width: 100%;
+}
+.skill-bar .filled[data-skill="95"] {
+  width: 95%;
+}
+.skill-bar .filled[data-skill="85"] {
+  width: 85%;
+}
+.skill-bar .filled[data-skill="60"] {
+  width: 60%;
+}
+
+.skill-bar .filled[data-skill="70"] {
+  width: 80%;
+}

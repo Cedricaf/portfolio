@@ -307,63 +307,78 @@ header::before {
   animation: fadeInText 2s ease-out forwards;
 }
 
+/* Container Styling */
 #skills {
-  margin: 0 auto;
-  max-width: 800px;
+  font-family: "Arial", sans-serif;
   padding: 2rem;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeIn 1s ease-out forwards;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 #skills h2 {
-  padding: 1rem;
-  color: #333;
   text-align: center;
+  margin-bottom: 2rem;
   font-size: 2rem;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInTitle 1.5s ease-out forwards;
+  color: #333;
+}
+
+/* Skill Block */
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  width: 20%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
 }
 
 .skill-bar {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  animation: fadeInText 2s ease-out forwards;
-}
-.skill-bar p {
-  font-weight: bold;
-}
-.skill-bar .progress {
-  width: 50%;
-  background-color: #ddd;
-  border-radius: 1rem;
+  width: 75%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 0.5rem;
-}
-.skill-bar .progress span {
-  display: block;
-  height: 1rem;
-  background-color: #f0a500;
-  border-radius: 5%;
+  position: relative;
+  margin-left: 1rem;
 }
 
-.stats {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.skill-bar .filled {
+  height: 100%;
+  background: linear-gradient(50deg, #f0a500, #f5b11d);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
 }
-.stats .stats-iframe {
+
+/* Add width dynamically using data-skill */
+.skill-bar .filled[data-skill="100"] {
+  width: 100%;
+}
+
+.skill-bar .filled[data-skill="95"] {
+  width: 95%;
+}
+
+.skill-bar .filled[data-skill="85"] {
+  width: 85%;
+}
+
+.skill-bar .filled[data-skill="60"] {
+  width: 60%;
+}
+
+.skill-bar .filled[data-skill="70"] {
   width: 80%;
-  border: none;
-}
-@media (max-width: 768px) {
-  .stats .stats-iframe {
-    display: none;
-  }
 }
 
 #projects {
