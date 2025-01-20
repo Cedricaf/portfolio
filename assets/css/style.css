@@ -307,7 +307,6 @@ header::before {
   animation: fadeInText 2s ease-out forwards;
 }
 
-/* Container Styling */
 #skills {
   font-family: "Arial", sans-serif;
   padding: 2rem;
@@ -330,6 +329,7 @@ header::before {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
 }
 
 .skill-info {
@@ -348,11 +348,12 @@ header::before {
   overflow: hidden;
   position: relative;
   margin-left: 1rem;
+  margin-top: 0.5rem; /* Space for smaller layouts */
 }
 
 .skill-bar .filled {
   height: 100%;
-  background: linear-gradient(50deg, #f0a500, #f5b11d);
+  background: linear-gradient(50deg, #f7c02c, #ffe17d); /* Original yellow gradient */
   border-radius: 10px;
   position: absolute;
   top: 0;
@@ -360,7 +361,7 @@ header::before {
   transition: width 0.5s ease-in-out;
 }
 
-/* Add width dynamically using data-skill */
+/* Filled Bar Widths */
 .skill-bar .filled[data-skill="100"] {
   width: 100%;
 }
@@ -378,10 +379,48 @@ header::before {
 }
 
 .skill-bar .filled[data-skill="70"] {
-  width: 80%;
+  width: 70%;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #skills {
+    padding: 1.5rem;
+  }
+  #skills h2 {
+    font-size: 1.8rem;
+  }
+  .skill {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+  .skill-info {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .skill-bar {
+    width: 100%; /* Take full width for smaller screens */
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  #skills {
+    padding: 1rem;
+  }
+  #skills h2 {
+    font-size: 1.5rem;
+  }
+  .skill-info {
+    font-size: 0.9rem;
+  }
+  .skill-bar {
+    height: 15px; /* Slightly smaller bars for compact screens */
+  }
+}
 #projects {
+  padding: 0.5rem;
   /* Responsive adjustments */
 }
 #projects .project-cards {
